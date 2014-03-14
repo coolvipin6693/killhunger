@@ -1,0 +1,58 @@
+<div class="well" align="center">
+	<h3> Order Summary </h3>
+
+ <table id="menu">	
+ 	<tr>
+ 		<th>Outlet</th>
+ 		<th>Menu Item</th>
+ 		<th>Description</th>
+ 		<th>Amount</th>
+ 		
+ 	</tr>
+
+ 	<% @selections.each do |option| %>
+ 	<tr>
+ 		<td><%= option.short_description %></td>
+ 		<td><%= option.item %></td>
+ 		<td><%= option.long_description %></td>
+ 		<td><%= option.amount %></td>
+ 	</tr>
+ 	<% end %>
+ </table>
+
+	
+
+	<a href="#" class="btn btn-primary">Proceed</a>
+<p>
+	To make changes to your order, click the back button
+	<a href='/' class="btn btn-primary">Back</a>
+</p>
+
+<p align="center">
+	PLease fill in the following details
+
+    <%= form_for @order do |f| %>
+		
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+		<%= f.label :address %>
+		<%= f.text_field :address %>
+		<%= f.label :mobile %>
+		<%= f.text_field :mobile %>
+		<%= f.label :total %>
+		<%= f.text_field :total %>
+		<%= f.label :items %>
+		<%= f.text_field :items %>
+		<%= f.label :short_description %>
+		<%= f.text_field :short_description %>
+		
+		<%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+		
+	<% end %>
+
+</p>
+
+
+</div>
+
+

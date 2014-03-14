@@ -21,6 +21,13 @@ Menu.create([
       item: "Burger",
       short_description: "Pizza Planet",
       long_description: "FUlly loaded burger"
+    },
+
+    {
+      amount: "100",
+      item: "Burger",
+      short_description: "Creative",
+      long_description: "FUlly loaded burger"
     }
     
 
